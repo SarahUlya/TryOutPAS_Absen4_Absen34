@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -17,6 +18,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 public class MainActivity extends AppCompatActivity {
 
+    Button btnPremiere;
     DrawerLayout drawerLayout;
     ImageView menu;
     LinearLayout home,dashboard,notification;
@@ -27,11 +29,20 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
+        btnPremiere = (Button) findViewById(R.id.btn_premiere);
         drawerLayout = findViewById(R.id.drawerLayout);
         menu = findViewById(R.id.menu);
         home = findViewById(R.id.home);
         dashboard = findViewById(R.id.dashboard);
         notification = findViewById(R.id.notification);
+
+        btnPremiere.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent premiereIntent = new Intent(MainActivity.this, PremiereActivity.class);
+                startActivity(premiereIntent);
+            }
+        });
 
         menu.setOnClickListener(new View.OnClickListener() {
             @Override
