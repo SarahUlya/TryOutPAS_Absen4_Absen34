@@ -14,15 +14,16 @@
 
         <include
             layout="@layout/toolbar"/>
-        
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Home"
+
+
+        <Button
+            android:id="@+id/btn_premiere"
             android:layout_gravity="center"
-            android:layout_marginTop="300dp"
-            android:textColor="@color/lavender"
-            android:textSize="36dp"/>
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:text="Premiere League"
+            android:textSize="16sp" />
 
     </LinearLayout>
 
