@@ -42,7 +42,7 @@ public class PremiereActivity extends AppCompatActivity {
     }
 
     private void fetchTeams() {
-        ApiService apiService = ApiClient.getRetrofitInstance().create(ApiService.class);
+        ApiService apiService = ApiClient.getRetrofitInstance();
         Call<TeamResponse> call = apiService.getTeams("English Premier League");
 
         call.enqueue(new Callback<TeamResponse>() {
