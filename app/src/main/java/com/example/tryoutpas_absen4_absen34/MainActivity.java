@@ -17,9 +17,9 @@ import androidx.core.view.WindowInsetsCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 public class MainActivity extends AppCompatActivity {
-
     Button btnPremiere;
     Button btnEnglish;
+    Button btnSpanish;
     DrawerLayout drawerLayout;
     ImageView menu;
     LinearLayout home,dashboard,notification;
@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnPremiere = (Button) findViewById(R.id.btn_premiere);
         btnEnglish = (Button) findViewById(R.id.btn_english);
+        btnSpanish = (Button) findViewById(R.id.btn_spanish);
         drawerLayout = findViewById(R.id.drawerLayout);
         menu = findViewById(R.id.menu);
         home = findViewById(R.id.home);
@@ -51,6 +52,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent englishIntent = new Intent(MainActivity.this, EnglishActivity.class);
                 startActivity(englishIntent);
+            }
+        });
+
+        btnSpanish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent spanishIntent = new Intent(MainActivity.this, SpanishActivity.class);
+                startActivity(spanishIntent);
             }
         });
 
